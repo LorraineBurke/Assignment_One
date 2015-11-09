@@ -25,6 +25,7 @@ var consolere = require('console-remote-client').connect('console.re','80','lorr
 
 // Function to handle web browser requests and server responses
 function handleRequest(request, response){
+ console.re.log("debug message");
     // A small maths problem - Add the augend and the addend to get the sum
     sum = augend * addend;
     // Send user the server response 
