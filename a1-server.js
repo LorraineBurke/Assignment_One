@@ -25,7 +25,6 @@ var consolere = require('console-remote-client').connect('console.re','80','lorr
 
 // Function to handle web browser requests and server responses
 function handleRequest(request, response){
- console.re.log("debug message");
     // A small maths problem - Add the augend and the addend to get the sum
     sum = augend * addend;
     // Send user the server response 
@@ -34,7 +33,11 @@ function handleRequest(request, response){
     // ASSIGNMENT
     // 1. Add a debug message which ouputs the sum of the simple equation above. Values are available in the augend, addend 
     // and sum (global) variables
+    console.re.log("The sum of "+augend+" + "+addend+ "= 9");
     // 2. Add a debug message which ouputs the current values of the augend addend and sum variables
+    console.re.log("Equation of sum is " + sum);
+    console.re.log("The value of augend is " + augend);
+    console.re.log("The value of addend is " + addend);
 }
 
 // Create an instance of a http server
@@ -46,6 +49,8 @@ server.listen(server_port, server_ip_address, function(){
     
     // ASSIGNMENT
     // 3. Add a debug message which ouputs a message indicating the server is started (listening for user requests).
+    console.re.log("HTTP Server is Listening");
     // 4. Add a debug message which ouputs your server ip address and your server port number. Your server ip address 
     // and your server port number values are available in the server_ip_address and server_port program global variables
+    console.re.log("HTTP Server listening on: " + server_ip_address + ":" + server_port);
 });
